@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos do Projeto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-family: 'Press Start 2P', sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        p {
+            font-size: 18px;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .carousel {
+            position: relative;
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-images img {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fotos do Projeto</h1>
+
+    <p>A seguir, apresentamos algumas imagens do nosso projeto:</p>
+
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="c:\Users\joao.pnsouza1\Pictures\Captura de tela 2024-11-22 180352.png" alt="Imagem 1">  </div>
+            <img src="c:\Users\joao.pnsouza1\Pictures\Captura de tela 2024-11-22 180421.png" alt="Imagem 2">  </div>
+            <img src="c:\Users\joao.pnsouza1\Pictures\Captura de tela 2024-11-22 180434.png" alt="Imagem 3">  </div>
+            <img src="c:\Users\joao.pnsouza1\Pictures\dkfh.png" alt="Imagem 4">  </div>
+            <img src="c:\Users\joao.pnsouza1\Pictures\Captura de tela 2024-11-22 180408.png" alt="Imagem 5"> <!-- Adicione uma imagem adicional -->  </div>
+        
+    </div>
+
+    <script>
+        // Lógica de rolamento com o mouse
+        const carousel = document.querySelector('.carousel-images');
+        let isMouseDown = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener('mousedown', (e) => {
+            isMouseDown = true;
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+        });
+
+        carousel.addEventListener('mouseleave', () => {
+            isMouseDown = false;
+        });
+
+        carousel.addEventListener('mouseup', () => {
+            isMouseDown = false;
+        });
+
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isMouseDown) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startX) * 3; // Ajuste a velocidade de rolagem
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+
+</body>
+</html>
+

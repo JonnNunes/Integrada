@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação - Projeto IoT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-family: 'Press Start 2P', sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        ul {
+            text-align: left;
+            margin: 0 auto;
+            display: inline-block;
+            font-size: 18px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        strong {
+            font-size: 20px;
+        }
+        .button-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        .button {
+            padding: 40px 80px;
+            font-size: 28px;
+            color: #fff;
+            background-color: rgba(206, 29, 29, 0.2);
+            border: 4px solid rgba(206, 29, 29, 0.2);
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+            font-family: 'Press Start 2P', sans-serif;
+        }
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Explicação do Projeto</h1>
+
+    <p>O objetivo do projeto é criar um sistema de acessibilidade para pessoas com deficiência visual, através de um boné com acessórios complementares para aumentar a interatividade e o auxílio ao usuário.</p>
+
+    <p><strong>Relatório:</strong><br>
+        Iniciamos o desenvolvimento do projeto projetando a estrutura e o sistema no Tinkercad, utilizando uma protoboard para montar os componentes necessários. O Arduino Uno foi escolhido para controlar os dispositivos eletrônicos e programar o funcionamento do sistema.
+    </p>
+
+    <p><strong>Componentes utilizados:</strong><br>
+        Os principais componentes conectados à protoboard são:
+        <ul>
+            <li>1 Buzzer</li>
+            <li>1 Sensor de Distância Ultrassônico (HC-SR04)</li>
+            <li>3 LEDs</li>
+            <li>5 Capacitores de 0,3k</li>
+            <li>1 Sensor LDR (Fotovoltaico)</li>
+            <li>9 Cabos Jumper</li>
+        </ul>
+    </p>
+
+    <p><strong>Origem do nome Arduino:</strong><br>
+        O nome "Arduino" foi inspirado pelo nome de um bar na cidade de Ivrea, na Itália, onde os criadores do projeto se reuniam para desenvolver a ideia que se tornou o Arduino.
+    </p>
+
+    <p><strong>Explicação do Código:</strong><br>
+        O código foi desenvolvido durante o bimestre. Inicialmente, declaramos as variáveis correspondentes aos pinos do Arduino e configuramos os pinos como OUTPUT (para os dispositivos que recebem comandos) e INPUT (para os sensores que armazenam dados).
+    </p>
+
+    <p>
+        A programação do sensor ultrassônico utiliza a fórmula <strong>duração * 0.034 / 2</strong> para calcular a distância. A condição <code>if (distance > 0 && distance <= 40)</code> ativa o LED vermelho e o buzzer se a distância for menor que 40 cm, enquanto a condição <code>else (distance > 40 && distance <= 100)</code> acende o LED verde e desliga o buzzer.
+    </p>
+
+    <p>
+        O código do sensor LDR foi implementado usando um valor booleano para determinar a intensidade da luz. Utilizamos a lógica de <code>if</code> e <code>else</code> para controlar o LED amarelo, ligando-o ou desligando-o conforme o valor lido.
+    </p>
+
+    <p><strong>Relacionamento com Outras Áreas:</strong><br>
+        <strong>Matemática:</strong> A matemática é essencial para o cálculo da distância com o sensor ultrassônico. A fórmula utilizada envolve multiplicação e divisão.<br>
+        <strong>Linguagens:</strong> Os LEDs são usados como uma forma de comunicação visual, com o LED vermelho indicando "PARA!" e o verde "OK!".<br>
+        <strong>Ciências Humanas:</strong> Este projeto pode beneficiar pessoas com deficiência visual, ajudando a melhorar sua mobilidade e autonomia.<br>
+        <strong>Ciência da Natureza:</strong> O sistema pode ser aplicado para monitoramento de ambientes e em projetos de automação, como no controle de irrigação na agricultura.
+    </p>
+
+
+
+</body>
+</html>

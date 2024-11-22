@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código - Carrinho Seguidor de Linha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-family: 'Press Start 2P', sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        p {
+            font-size: 18px;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        pre {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 5px;
+            color: #00FF00;
+            font-size: 16px;
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .button-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        .button {
+            padding: 40px 80px;
+            font-size: 28px;
+            color: #fff;
+            background-color: rgba(206, 29, 29, 0.2);
+            border: 4px solid rgba(206, 29, 29, 0.2);
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+            font-family: 'Press Start 2P', sans-serif;
+        }
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Código do Carrinho Seguidor de Linha</h1>
+
+    <p>A seguir, apresentamos o código desenvolvido para o carrinho seguidor de linha:</p>
+
+    <pre>
+        //Definição dos pinos de controle do motor
+        #define M1 10 // Pino_Velocidade 1º Motor ( 0 a 255)_ Porta IN2 ponte H;
+        #define M2 8 //Pino_Velocidade 2º Motor ( 0 a 255) _ Porta IN4 ponte H;
+        #define dir1 11 //Pino_Direção do 1º Motor: Para frente / Para trás (HIGH ou LOW)_ porta IN1 ponte H;
+        #define dir2 9 //Pino_Direção do 2º Motor: Para frente / Para trás (HIGH ou LOW)_ porta IN3 ponte H;
+        
+        //Definição dos pinos dos sensores
+        #define pin_S1 7
+        #define pin_S2 6
+        bool Sensor1 = 0;
+        bool Sensor2 = 0;
+        
+        //variável responsável por controlar a velocidade dos motores
+        int velocidade = 150;
+
+        void setup(){
+            //Setamos os pinos de controle dos motores como saída
+            pinMode(M1, OUTPUT);
+            pinMode(M2, OUTPUT);
+            pinMode(dir1, OUTPUT);
+            pinMode(dir2, OUTPUT);
+
+            //Setamos a direção inicial do motor como 0, isso fará com que ambos os motores girem para frente
+            digitalWrite(dir1, LOW);
+            digitalWrite(dir2, LOW);
+
+            //Setamos os pinos dos sensores como entrada
+            pinMode(pin_S1, INPUT);
+            pinMode(pin_S2, INPUT);
+        }
+
+        void loop(){
+            //Neste processo armazenamos o valor lido pelo sensor na variável que armazena tais dados.
+            Sensor1 = digitalRead(pin_S1);
+            Sensor2 = digitalRead(pin_S2);
+
+            //Aqui está toda a lógica de comportamento do robô: Para a cor branca atribuímos o valor 0 e, para a cor preta, o valor 1.
+            if((Sensor1 == 0) && (Sensor2 == 0)){ // Se detectar na extremidade das faixas duas cores brancas
+                analogWrite(M1, velocidade); // Ambos motores ligam na mesma velocidade
+                analogWrite(M2, velocidade);
+            }
+            if((Sensor1 == 1) && (Sensor2 == 0)){ // Se detectar um lado preto e o outro branco
+                analogWrite(M1, 0); // O motor 1 desliga
+                analogWrite(M2, velocidade); // O motor 2 fica ligado, fazendo assim o carrinho virar
+            }
+            if((Sensor1 == 0) && (Sensor2 == 1)){ // Se detectar um lado branco e o outro preto
+                analogWrite(M1, velocidade); //O motor 1 fica ligado
+                analogWrite(M2, 0); // O motor 2 desliga, fazendo assim o carrinho virar no outro sentido
+            }
+        }
+    </pre>
+
+</body>
+</html>

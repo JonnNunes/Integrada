@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sociologia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fundo.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-family: 'Press Start 2P', sans-serif;
+            color: #fff;
+            text-align: center;
+            overflow-y: scroll;
+        }
+        canvas#background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+        }
+        .favorite-task {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Estilo para o texto no lado esquerdo */
+        .arroz-text {
+            position: absolute;
+            top: 20%;
+            left: 20px;
+            max-width: 400px;
+            font-size: 18px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Estilo para o container de imagens */
+        .images-container {
+            position: absolute;
+            top: 20%;
+            right: 20px;
+            display: flex; /* Coloca as imagens lado a lado */
+            gap: 20px; /* Espaçamento entre as imagens */
+        }
+
+        .image-item img {
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Estilo do link */
+        .link-container {
+            margin-top: 30px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .link-container a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .link-container a:hover {
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="background"></canvas>
+
+    <h1>Sociologia</h1>
+
+    <div class="favorite-task">
+        <p>Tarefas favoritas do aluno durante o ensino médio</p>
+    </div>
+
+    <!-- Texto no lado esquerdo -->
+    <div class="arroz-text">
+        Essa foi a atividade integrada de CHS do 2º Bimestre, nela, tínhamos que fazer um 
+        álbum de figurinhas usando figuras do iluminismo, revolução francesa, revolução americana 
+        e bioética e ética. Minha ideia para a atividade foi de me inspirar no álbum de figurinhas
+        da copa de 2022. 
+            <!-- Link -->
+    <div class="link-container">
+        <p>Não deu para colocar toda a atividade ;-; por isso aqui temos o link do Canva completo.</p>
+        <a href="https://www.canva.com/design/DAGAKG3DbuA/genP7j8ucxDR_CtkE-xzDw/edit?utm_content=DAGAKG3DbuA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Link Canva completo</a>
+    </div>
+
+    </div>
+
+    <!-- Imagens lado a lado, alinhadas à direita -->
+    <div class="images-container">
+        <!-- Primeira imagem -->
+        <div class="image-item">
+            <img src="c:\Users\joao.pnsouza1\Downloads\Integrada de CHS.png" alt="Imagem 1">
+        </div>
+
+        <!-- Segunda imagem -->
+        <div class="image-item">
+            <img src="c:\Users\joao.pnsouza1\Downloads\Integrada de CHS (1).png" alt="Imagem 2">
+        </div>
+    </div>
+
+    
+    <script src="particles.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fundo.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+            font-family: 'Press Start 2P', sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+        canvas#background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .content-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            flex-direction: column;
+        }
+        .content-container img {
+            width: 1000px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .favorite-task {
+            font-size: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .side-text {
+            font-size: 18px;
+            color: #fff;
+            margin-top: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Estilo da imagem no canto inferior esquerdo */
+        .corner-image {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 400px;  /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            opacity: 0.5;  /* Torna a imagem semi-transparente */
+            pointer-events: none; /* Impede que a imagem interfira nos eventos */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="background"></canvas>
+
+    <h1>Matemática</h1>
+
+    <div class="favorite-task">
+        <p>Tarefas favoritas do aluno durante o ensino médio</p>
+    </div>
+
+    <div class="content-container">
+        <img src="c:\Users\joao.pnsouza1\Pictures\matttt.png" alt="Imagem Relacionada à Matemática">
+        <div class="side-text">A atividade de matemática escolhida foram exercícios</div>
+        <div>de juros no Excel, nela, nós temos 9 exercícios de juros. </div>
+    </div>
+
+    <!-- Imagem no canto inferior esquerdo -->
+    <img src="c:\Users\joao.pnsouza1\Pictures\shared image.jpg" alt="Imagem Canto Inferior" class="corner-image">
+
+    <script src="particles.js"></script>
+</body>
+</html>

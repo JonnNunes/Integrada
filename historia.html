@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fundo.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+            font-family: 'Press Start 2P', sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+        canvas#background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .favorite-task {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Estilo para o container da imagem e do texto lado a lado */
+        .image-text-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        /* Estilo para a imagem no lado esquerdo */
+        .image-text-container img {
+            width: 70%;
+            height: auto;
+            max-width: 1000px;
+            border-radius: 10px;
+        }
+
+        /* Estilo para o texto no lado direito */
+        .image-text-container .text-container {
+            font-size: 24px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            max-width: 600px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="background"></canvas>
+
+    <h1>História</h1>
+
+    <div class="favorite-task">
+        <p>Tarefas favoritas do aluno durante o ensino médio</p>
+    </div>
+
+    <!-- Container para imagem e texto -->
+    <div class="image-text-container">
+        <!-- Imagem no lado esquerdo -->
+        <img src="c:\Users\joao.pnsouza1\Pictures\Captura de tela 2024-11-22 161209.png" alt="Imagem de História">
+        
+        <!-- Texto no lado direito -->
+        <div class="text-container">
+            <p>Na atividade de história, eu coloquei mais uma atividade retirada do Fanzine. Nessa atividade, eu tive que escolher alguma coisa histórica do Brasil e descrevê-la, no caso, eu escolhi a guerra de Canudos.</p>
+        </div>
+    </div>
+
+    <script src="particles.js"></script>
+</body>
+</html>

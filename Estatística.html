@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estatística</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fundo.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-family: 'Press Start 2P', sans-serif;
+            color: #fff;
+            text-align: center;
+            overflow-y: scroll; /* Permite rolagem vertical */
+        }
+        canvas#background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+        }
+        .favorite-task {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Estilo para o container de imagens */
+        .images-container {
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .image-item img {
+            width: 700px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .side-text {
+            font-size: 18px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            max-width: 800px; /* Limite de largura do texto */
+            margin: 10px auto; /* Centraliza o texto horizontalmente */
+            text-align: justify; /* Justifica o texto */
+        }
+
+        /* Primeira imagem no lado esquerdo */
+        .first-image {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        /* Segunda imagem no lado direito */
+        .second-image {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        /* Terceira imagem abaixo da segunda e à esquerda */
+        .third-image {
+            position: absolute;
+            left: 10px;
+            top: 300px; /* Ajuste conforme necessário */
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="background"></canvas>
+
+    <h1>Estatística</h1>
+
+    <div class="favorite-task">
+        <p>Tarefas favoritas do aluno durante o ensino médio</p>
+    </div>
+
+    <div class="images-container">
+        <!-- Primeira imagem no lado esquerdo -->
+        <div class="image-item first-image">
+            <img src="c:\Users\joao.pnsouza1\Pictures\est 1.png" alt="Imagem 1">
+        </div>
+
+        <!-- Segunda imagem no lado direito -->
+        <div class="image-item second-image">
+            <img src="c:\Users\joao.pnsouza1\Pictures\est 2.png" alt="Imagem 2">
+            <div class="side-text">
+                Aqui temos a atividade de Estatística, onde a instrução era realizar 
+                os exercícios de uma loja. Na atividade, temos 6 lojas e temos 
+                que analisar a estatística de venda delas.
+            </div>
+        </div>
+
+        <!-- Terceira imagem abaixo da segunda e à esquerda -->
+        <div class="image-item third-image">
+            <img src="c:\Users\joao.pnsouza1\Pictures\est 3.png" alt="Imagem 3">
+
+        </div>
+    </div>
+
+    <script src="particles.js"></script>
+</body>
+</html>

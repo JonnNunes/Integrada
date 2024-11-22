@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geografia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fundo.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-family: 'Press Start 2P', sans-serif;
+            color: #fff;
+            text-align: center;
+            overflow-y: scroll; /* Permite rolagem vertical */
+        }
+        canvas#background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+        }
+        .favorite-task {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Estilo para o container de imagens */
+        .images-container {
+            position: relative;
+            margin-top: 70px;
+        }
+
+        .image-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding-bottom: 10px;
+        }
+
+        .image-item img {
+            width: 700px;
+            height: auto;
+            border-radius: 10px; /* Borda opcional */
+        }
+
+        .side-text {
+            font-size: 18px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Estilo para a primeira imagem no lado esquerdo */
+        .first-image {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* Estilo para a segunda imagem no lado direito */
+        .second-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        /* Estilo para a terceira imagem abaixo da primeira e à esquerda */
+        .third-image {
+            position: absolute;
+            left: 0;
+            top: 450px; /* Ajuste o valor conforme a altura da imagem 1 */
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="background"></canvas>
+
+    <h1>Geografia</h1>
+
+    <div class="favorite-task">
+        <p>Tarefas favoritas do aluno durante o ensino médio</p>
+    </div>
+
+    <div class="images-container">
+        <!-- Primeira imagem no lado esquerdo -->
+        <div class="image-item first-image">
+            <img src="c:\Users\joao.pnsouza1\Downloads\1.png" alt="Imagem 1">
+        </div>
+
+        <!-- Segunda imagem no lado direito -->
+        <div class="image-item second-image">
+            <img src="c:\Users\joao.pnsouza1\Downloads\2.png" alt="Imagem 2">
+        </div>
+
+        <!-- Terceira imagem abaixo da primeira e à esquerda -->
+        <div class="image-item third-image">
+            <img src="c:\Users\joao.pnsouza1\Downloads\3.png" alt="Imagem 3">
+        </div>
+    </div>
+
+    <script src="particles.js"></script>
+</body>
+</html>

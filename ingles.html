@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inglês</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fundo.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            font-family: 'Press Start 2P', sans-serif;
+            color: #fff;
+            overflow-y: scroll;
+        }
+        canvas#background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+        .favorite-task {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+        /* Container para imagem e texto */
+        .image-text-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 50px;
+            gap: 20px;
+        }
+
+        /* Estilo da imagem */
+        .image-container img {
+            width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Estilo do texto */
+        .text-container {
+            flex: 1;
+            font-size: 18px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Imagem no canto inferior direito */
+        .corner-image {
+            position: fixed;
+            bottom: 0;
+            right: 0; /* Altera para o lado direito */
+            width: 400px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            opacity: 0.5; /* Torna a imagem semi-transparente */
+            pointer-events: none; /* Impede que a imagem interfira nos eventos */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="background"></canvas>
+
+    <h1>Inglês</h1>
+
+    <div class="favorite-task">
+        <p>Tarefas favoritas do aluno durante o ensino médio</p>
+    </div>
+
+    <!-- Container para imagem e texto -->
+    <div class="image-text-container">
+        <!-- Imagem no lado esquerdo -->
+        <div class="image-container">
+            <img src="c:\Users\joao.pnsouza1\Downloads\Mídia.jfif" alt="Imagem de Inglês">
+        </div>
+        <!-- Texto no lado direito -->
+        <div class="text-container">
+            Essa foi uma atividade do Fanzine que foi uma atividade integrada que uniu as matérias de CHS e Linguagens. 
+            Essa de inglês, eu tive que escolher uma arte e trazer um sentimento que ela me transmitia em inglês.
+        </div>
+    </div>
+    <img src="c:\Users\joao.pnsouza1\Pictures\Captura de tela 2024-11-22 153850.png" alt="Imagem Canto Inferior" class="corner-image">
+
+    <script src="particles.js"></script>
+</body>
+</html>

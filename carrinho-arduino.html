@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto IoT - Carrinho Arduino</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            background-color: #000;
+            font-family: 'Press Start 2P', sans-serif;
+            color: #fff;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+        canvas#background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Estilo para os botões grandes */
+        .button-container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .button {
+            padding: 40px 80px;
+            font-size: 28px;
+            color: #fff;
+            background-color: rgba(206, 29, 29, 0.2);
+            border: 4px solid rgba(206, 29, 29, 0.2);
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+            font-family: 'Press Start 2P', sans-serif;
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="background"></canvas>
+
+    <h1>Projeto IoT - Carrinho Arduino</h1>
+
+    <!-- Botões para navegação -->
+    <div class="button-container">
+        <a href="explicaçãocarrinho.html" class="button">Explicação</a>
+        <a href="codigocarrinho.html" class="button">Código</a>
+        <a href="fotocarrinho.html" class="button">Fotos </a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Química</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fundo.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            background-color: #000;
+            font-family: 'Press Start 2P', sans-serif;
+            color: #fff;
+            text-align: center;
+            scroll-behavior: smooth; /* Rolagem suave */
+        }
+        canvas#background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .favorite-task {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Estilo para o container de imagem e texto lado a lado */
+        .image-text-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        /* Estilo para a imagem */
+        .image-text-container img {
+            width: 40%;
+            height: auto;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        /* Estilo para o texto ao lado da imagem */
+        .text-container {
+            font-size: 24px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            max-width: 800px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="background"></canvas>
+
+    <h1>Química</h1>
+
+    <div class="favorite-task">
+        <p>Tarefas favoritas do aluno durante o ensino médio</p>
+    </div>
+
+    <!-- Container para imagem e texto lado a lado -->
+    <div class="image-text-container">
+        <!-- Imagem no lado esquerdo -->
+        <img src="c:\Users\joao.pnsouza1\Downloads\shared image (1).jfif" alt="Imagem Química">
+        
+        <!-- Texto no lado direito -->
+        <div class="text-container">
+            <p>Na atividade de quimica eu escolhi uma em que eu analisei o DNA do morango.</p>
+        </div>
+    </div>
+
+    <script src="particles.js"></script>
+</body>
+</html>
