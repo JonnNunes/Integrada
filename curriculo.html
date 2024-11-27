@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculo</title>
+    <title>Currículo Interativo</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
@@ -50,9 +50,16 @@
             margin-top: 20px;
         }
 
+        .content-section {
+            display: none;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
         .button {
             padding: 10px 20px;
-            font-size: 16px;
+            font-size: 40px;
             color: #fff;
             background-color: rgba(206, 29, 29, 0.2);
             border: 4px solid rgba(206, 29, 29, 0.2);
@@ -72,10 +79,41 @@
     <p class="insert-coin">Insert coin to continue</p>
 
     <div class="button-container" id="options">
-        <a href="Objetivos.html" class="button">Objetivos</a>
-        <a href="Formação.html" class="button">Formação</a>
-        <a href="SoftSkills.html" class="button">Soft Skills</a>
-        <a href="Habilidades.html" class="button">Habilidades</a>
+        <button class="button" onclick="showContent('objetivo')">Objetivo</button>
+        <button class="button" onclick="showContent('formacao')">Formação</button>
+        <button class="button" onclick="showContent('habilidades')">Habilidades Técnicas</button>
+        <button class="button" onclick="showContent('softskills')">Soft Skills</button>
+    </div>
+
+    <div class="content-section" id="objetivo">
+        <h3>Objetivo</h3>
+        <p>Ganhar experiência na área de IoT, garantindo um bom serviço.</p>
+    </div>
+
+    <div class="content-section" id="formacao">
+        <h3>Formação</h3>
+        <p>Ensino Médio Técnico em IoT<br>Escola Técnica (Senac Santo Amaro), São Paulo, SP<br>Conclusão: Dezembro de 2024</p>
+    </div>
+
+    <div class="content-section" id="habilidades">
+        <h3>Habilidades Técnicas</h3>
+        <ul>
+            <li>Programação em Python, C++</li>
+            <li>Redes de Sensores sem Fio</li>
+            <li>Protocolos de Comunicação IoT (MQTT, CoAP)</li>
+            <li>Desenvolvimento em Arduino e Raspberry Pi</li>
+            <li>Análise de Dados e Machine Learning</li>
+        </ul>
+    </div>
+
+    <div class="content-section" id="softskills">
+        <h3>Soft Skills</h3>
+        <ul>
+            <li>Trabalho em Equipe</li>
+            <li>Ajudar nos problemas</li>
+            <li>Comunicação</li>
+            <li>Apresentar Soluções</li>
+        </ul>
     </div>
 
     <script>
@@ -84,6 +122,12 @@
             document.querySelector(".insert-coin").style.display = "none";
             document.getElementById("options").style.display = "flex";
         };
+
+        function showContent(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
     </script>
 </body>
 </html>
